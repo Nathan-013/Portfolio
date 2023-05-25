@@ -12,7 +12,7 @@ import 'animate.css';
 export default function Home() {
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
-      console.log(entries)
+      // console.log(entries)
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('animate__animated')

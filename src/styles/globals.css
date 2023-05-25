@@ -15,14 +15,9 @@ hr {
 body {
   font-family: 'Courier New', Courier, monospace;
   font-size: 24px;
-  /* line-height: 1.5; rgb(55, 1, 77)*/
   background-image: -webkit-linear-gradient(top, #000, #12470e, #111);
   background-color: #0c0c0c;
-  /* background-image: linear-gradient(black, white); */
-  /* color: #DADADB; */
-  /* width: 900px; */
-  /* margin: 0 auto; */
-  /* padding: 0 0; */
+  scroll-behavior: smooth;
 }
 
 .dn {
@@ -33,12 +28,10 @@ body {
 .ctn {
   width: 1200px;
   margin: 0 auto;
-  padding: 0 0;
   background-color: #121310;
   background-color: rgba(12, 13, 10, 0.1);
   border-radius: 10px;
   padding: 0px 5px 5px 5px;
-  /* border: 1px dotted white; */
 }
 
 a {
@@ -48,9 +41,13 @@ a {
 
 /* Navbar */
 .nav-ctn {
-  margin: 0 20px;
-  /* background-color: #adff33; */
-  padding: 10px;
+  display: block;
+  background-color: #000;
+  padding: 12px;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
 }
 
 .nav-box {
@@ -59,11 +56,12 @@ a {
   align-items: center;
   padding: 10px;
   color: #66ff00;
-  /* background-color: #fff; */
 }
 
 .menu-ctn > a:hover {
   text-decoration: underline;
+  transition: all 2s;
+  cursor: pointer;
 }
 
 /* logo */
@@ -89,7 +87,7 @@ a {
 
 /* INTRO */
 .intro-ctn {
-  margin: 70px 20px;
+  margin: 90px 20px;
   color: #ddd;
 }
 

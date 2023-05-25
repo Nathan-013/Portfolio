@@ -1,14 +1,15 @@
-import Image from "next/image"
+// import Image from "next/image"
 import Link from "next/link"
-import styles from "@/styles/utils.module.css"
+// import styles from "@/styles/utils.module.css"
+import { Link as ScrollLink, animateScroll as scroll} from 'react-scroll'
 
 const Navbar = () => {
   return (
-    <div className="nav-ctn">
+    <header className="nav-ctn">
 
       <div className="nav-box">
         <div className="nav-logo">
-          <Link href='#' className="logo-ctn">
+          <Link href='' className="logo-ctn" onClick={() => scroll.scrollToTop()}>
             <span>{'<'} </span>
               nathanreis
             <span> {'/>'}</span>
@@ -16,17 +17,17 @@ const Navbar = () => {
         </div>
 
         <div className="menu-ctn">
-          <Link href='#'>Home</Link>
-          <Link href='#about'>Sobre</Link>
-          <Link href='#skills'>Skills</Link>
-          <Link href='#projects'>Projetos</Link>
-          <Link href='#contact'>Contato</Link>
+          <ScrollLink onClick={() => scroll.scrollToTop()} to='' smooth={true} duration={500}>Home</ScrollLink>
+          <ScrollLink to="about" smooth={true} duration={500}>Sobre</ScrollLink>
+          <ScrollLink to="skills" smooth={true} duration={500}>Skills</ScrollLink>
+          <ScrollLink to="projects" smooth={true} duration={500}>Projetos</ScrollLink>
+          <ScrollLink to="contact" smooth={true} duration={500}>Contato</ScrollLink>
           
-          <i className={`fa-solid fa-bars ${styles.dnone}`}></i>
+          {/* <i className={`fa-solid fa-bars ${styles}`}></i> */}
         </div>
       </div>
 
-    </div>
+    </header>
   )
 }
 
