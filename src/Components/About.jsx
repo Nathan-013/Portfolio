@@ -1,5 +1,5 @@
 import Image from "next/image"
-import perfil from '../../public/images/perfil2.jpeg'
+import perfil from '../../public/images/contato-pf.jpeg'
 
 const About = () => {
   return (

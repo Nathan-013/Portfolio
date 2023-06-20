@@ -1,3 +1,17 @@
+:root {
+  --main-color: #66ff00;
+
+  --default-bg-color: #0c0c0c;
+  /* --default-white-bg-color: #ddd; */
+  --bg-gradient: #000, #12470e, #111;
+
+  --ctn-default-bg-color: #121310;
+  --ctn-bg-gradient: rgba(12, 13, 10, 0.1);
+
+  /* --nav-gradient: rgba(12, 13, 10, 0.5);   */
+  --nav-gradient: rgba(4, 4, 4, 0.8);  
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -15,8 +29,8 @@ hr {
 body {
   font-family: 'Courier New', Courier, monospace;
   font-size: 24px;
-  background-image: -webkit-linear-gradient(top, #000, #12470e, #111);
-  background-color: #0c0c0c;
+  background-image: -webkit-linear-gradient(top, var(--bg-gradient));
+  background-color: var(--default-bg-color);
   scroll-behavior: smooth;
 }
 
@@ -26,12 +40,13 @@ body {
 
 /* main container */
 .ctn {
-  width: 1200px;
+  /* width: 1200px; */
+  width: 90%;
   margin: 0 auto;
-  background-color: #121310;
-  background-color: rgba(12, 13, 10, 0.1);
+  background-color: var(--ctn-default-bg-color);
+  background-color: var(--ctn-bg-gradient);
   border-radius: 10px;
-  padding: 0px 5px 5px 5px;
+  padding: 15px 5px 5px 5px;
 }
 
 a {
@@ -39,10 +54,16 @@ a {
   color: #FFF;
 }
 
+@media screen and (max-width: 1000px) {
+  .ctn {
+    width: 80%; 
+  }
+}
+
 /* Navbar */
 .nav-ctn {
   display: block;
-  background-color: #000;
+  background-color: var(--nav-gradient);
   padding: 12px;
   position: fixed;
   top: 0;
@@ -55,7 +76,7 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  color: #66ff00;
+  color: var(--main-color);
 }
 
 .menu-ctn > a:hover {
@@ -71,7 +92,7 @@ a {
 }
 
 .logo-ctn span {
-  color: #66ff00;
+  color: var(--main-color);
 }
 
 .logo-ctn a {
@@ -81,8 +102,19 @@ a {
 /* menu */
 .menu-ctn a {
   margin: 10px;
-  color: #66ff00;
+  color: var(--main-color);
   font-weight: bold;
+}
+
+@media screen and (max-width: 810px) {
+  .menu-ctn > a {
+    display: none;
+  }
+
+  .menu-ctn > i {
+    display: block;
+    font-size: 30px;
+  }
 }
 
 /* INTRO */
@@ -93,11 +125,11 @@ a {
 
 .intro-ctn .sm-text {
   font-size: 18px;
-  color: #66ff00;
+  color: var(--main-color);
 }
 
 .intro-ctn span {
-  color: #66ff00;
+  color: var(--main-color);
 }
 
 .intro-ctn h1 {
@@ -111,13 +143,14 @@ a {
 
 .desc-ctn {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 20px;
   padding: 5px;
 }
 
 .desc-ctn img {
-  margin-right: 5%;
+  /* margin-right: 5%; */
+  width: auto;
 }
 
 .intro-ctn .desc {
@@ -126,6 +159,20 @@ a {
   text-align: justify;
   width: 550px;
   /* margin-top: 30px; */
+}
+
+@media screen and (max-width: 1123px) {
+  .intro-ctn .desc-ctn {
+    /* flex-direction: column; */
+  }
+
+  .desc {
+    font-size: 3px;
+  }
+
+  .loadingspinner {
+    margin: 0px 0px;
+  }
 }
 
 
@@ -144,7 +191,7 @@ a {
 
 .about-text h2,
 span {
-  color: #66ff00;
+  color: var(--main-color);
   margin-bottom: 20px;
 }
 
@@ -196,7 +243,7 @@ span {
 /* SKILLS */
 .skills-ctn {
   margin: 100px 0 0 20px;
-  color: #66ff00;
+  color: var(--main-color);
 }
 
 .skills-ctn h2 {
@@ -217,7 +264,7 @@ span {
   justify-content: center;
   align-items: center;
   background-color: #070707d5;
-  color: #66ff00;
+  color: var(--main-color);
   border: 1px solid #000;
   border-radius: 40px;
   gap: 0 1rem;
@@ -268,7 +315,7 @@ span {
 .projects-ctn h2 {
   font-size: 40px;
   margin-bottom: 20px;
-  color: #66ff00;
+  color: var(--main-color);
 }
 
 .projects-grid {
@@ -319,7 +366,7 @@ span {
 
 
 .project-card h3 {
-  color: #66ff00;
+  color: var(--main-color);
   font-size: 20px;
   margin-bottom: 10px;
 }
@@ -351,7 +398,7 @@ span {
 
 .contact-ctn h2 {
   font-size: 40px;
-  color: #66ff00;
+  color: var(--main-color);
   margin-bottom: 20px;
 }
 
@@ -368,8 +415,8 @@ span {
   width: 180px;
   height: 50px;
   background-color: #0c0c0c;
-  border: 2px solid chartreuse;
-  color: #66ff00;
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
   font-size: 16px;
   font-weight: bold;
   border-radius: 3px;
@@ -377,13 +424,13 @@ span {
 }
 
 .contact-ctn button:hover {
-  background-color: #66ff00;
+  background-color: var(--main-color);
   color: #000;
 }
 
 .contact-ctn a {
   padding: 15px 55px;
-  color: #66ff00;
+  color: var(--main-color);
 }
 
 .contact-ctn a {
@@ -404,17 +451,18 @@ span {
   --in-timing-function: ease-out;
   width: calc(3 * var(--offset) + var(--square));
   height: calc(2 * var(--offset) + var(--square));
-  padding: 0px;
-  margin-left: auto;
+  padding-left: 30px;
+  margin: -50px 10px 0px 10px;
+  /* margin-left: auto;
   margin-right: auto;
   margin-top: -50px;
-  margin-bottom: 30px;
-  position: relative;
+  margin-bottom: 30px; */
+  /* position: relative; */
 }
 
 .loadingspinner div {
   display: inline-block;
-  background: #66ff00;
+  background: var(--main-color);
   /*background: var(--text-color);*/
   /*box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);*/
   border: none;

@@ -1,9 +1,10 @@
 // import Image from "next/image"
 import Link from "next/link"
-// import styles from "@/styles/utils.module.css"
+import styles from "@/styles/utils.module.css"
 import { Link as ScrollLink, animateScroll as scroll} from 'react-scroll'
 
 const Navbar = () => {
+
   return (
     <header className="nav-ctn">
 
@@ -23,7 +24,7 @@ const Navbar = () => {
           <ScrollLink to="projects" smooth={true} duration={500}>Projetos</ScrollLink>
           <ScrollLink to="contact" smooth={true} duration={500}>Contato</ScrollLink>
           
-          {/* <i className={`fa-solid fa-bars ${styles}`}></i> */}
+          <i className={`fa-solid fa-bars ${styles.dnone}`}></i>
         </div>
       </div>
 
