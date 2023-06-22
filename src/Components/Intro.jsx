@@ -3,7 +3,7 @@ import Animation from "./Animation"
 
 const Intro = () => {
   return (
-    <div className='intro-ctn dn'>
+    <div className='intro-ctn'>
       <p className='sm-text'>Olá meu nome é Nathan Moreira</p> 
       <h1>
         futuro desenvolvedor <span>Front-end.</span>
@@ -17,8 +17,11 @@ const Intro = () => {
           tecnologias. 
         </p>
 
-        <Animation/>
-        {/* <Image src='/images/zoro.jpg' alt="foto de perfil" width={300} height={250} /> */}
+        <div className="animation-ctn">
+          <Animation/>
+        </div>
+
+        
       </div>
 
     </div>

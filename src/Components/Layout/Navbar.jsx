@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <header className="nav-ctn">
 
-      <div className="nav-box">
+      <nav className="nav-box">
         <div className="nav-logo">
           <Link href='' className="logo-ctn" onClick={() => scroll.scrollToTop()}>
             <span>{'<'} </span>
@@ -26,7 +26,7 @@ const Navbar = () => {
           
           <i className={`fa-solid fa-bars ${styles.dnone}`}></i>
         </div>
-      </div>
+      </nav>
 
     </header>
   )

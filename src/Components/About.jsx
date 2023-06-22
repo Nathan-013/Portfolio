@@ -3,7 +3,7 @@ import perfil from '../../public/images/contato-pf.jpeg'
 
 const About = () => {
   return (
-    <div id='about' className="about-ctn dn">
+    <div id='about' className="about-ctn">
       <div className='social-ctn'>
         <Image 
           src={perfil} 
