@@ -47,11 +47,13 @@ export default function Home() {
       </Head>
 
       <Layout>
-        <Intro />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
+        <main>
+          <Intro />
+          <About />
+          <Skills />
+          <Projects />
+          <Contact />
+        </main>
       </Layout>
     </>
   )

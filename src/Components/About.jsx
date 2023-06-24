@@ -28,7 +28,7 @@ const About = () => {
 
       <div className="about-text">
         <h2>Sobre</h2>
-        <span>Uma breve descrição de quem sou eu:</span>
+        <span>Uma breve descrição de quem eu sou:</span>
         
         <p>
           Olá! tenho 22 anos e sou um estudante de Ciência da Computação, atualmente no 6º perído,
